@@ -1,0 +1,24 @@
+<div class="bg-light w-75 mx-auto mb-5 bd-example p-5 shadow rounded">
+  <h5 class="primary text-center">Lista de productos</h5>
+  <br>
+  <table class="table bg-white">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Thumbnail</th>
+      </tr>
+    </thead>
+    <tbody id="table">
+      {{#each productList}}
+      <tr>
+        <th scope="row">{{this.id}}</th>
+        <td>{{this.name}}</td>
+        <td>${{this.price}}</td>
+        <td><img style="width:50px;" src="{{this.photo}}" alt=""></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

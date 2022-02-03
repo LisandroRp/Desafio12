@@ -1,0 +1,12 @@
+
+span#email {
+    color: blue;
+    font-weight: bold
+}
+span#date {
+    color: red
+}
+span#text {
+    color: green;
+    font-style: italic;
+}

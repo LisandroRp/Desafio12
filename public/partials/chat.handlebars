@@ -1,0 +1,41 @@
+<div class="mr-auto bg-light p-5">
+        <h5 class="primary text-center">Message center</h5>
+        <br>
+
+        <h6 class="primary">Author data</h6>
+        <hr>
+
+        <form id="chatForm">
+
+            <input id="email" type="email" class="form-control" placeholder="Enter your email">
+            <br>
+            <input id="firstName" class="form-control" placeholder="Enter your first name">
+            <br>
+            <input id="lastName" class="form-control" placeholder="Enter your last name">
+            <br>
+            <input id="age" type="number" class="form-control" placeholder="Enter your age">
+            <br>
+            <input id="alias" class="form-control" placeholder="Enter your alias">
+            <br>
+            <input id="avatar" class="form-control" placeholder="Enter your avatar URL">
+
+            <br>
+            {{#each messages}}
+            <span id="email">{{this.author.id}}</span>
+            <span id="date">[{{this.date}}]</span>
+            <span id="text">: {{this.text}}</span>
+            <img width=50px src="{{this.author.avatar}}"}/>
+            <br>
+            {{/each}}
+            <div id="messages"></div>
+
+            <br><br>
+
+            <input id="dataInput" class="form-control w-25 d-inline" placeholder="Enter your message" autocomplete="off"
+                required>
+            <br><br>
+            <input class="btn btn-primary w-25 d-inline " id="submit-chat" type="submit" value="Send"></input>
+
+        </form>
+
+</div>
